@@ -296,42 +296,46 @@ img{
   position: relative;
   padding-right:30rem/@rem;
   background-color: #fff;
-  overflow: hidden;//需要做动态滑动条,需删除
-  .baicai-bg-img{
-      width:40rem/@rem;
-      height:100%;
-      position: absolute;
-      border-left:@border; 
-      top:0;
-      right:0;
-      background-color: #fff;
-      z-index:1;
-      img{
-        width:25rem/@rem;
-        height:25rem/@rem;
-        position: absolute;
-        top:10rem/@rem;
-        right:10rem/@rem;
+  // overflow: hidden;//需要做动态滑动条,需删除;不能在这里加;会影响gsproduct页面的点击;
+      .baicai-bg-img{
+          width:40rem/@rem;
+          height:100%;
+          position: absolute;
+          border-left:@border; 
+          top:0;
+          right:0;
+          background-color: #fff;
+          z-index:1;
+          img{
+            width:25rem/@rem;
+            height:25rem/@rem;
+            position: absolute;
+            top:10rem/@rem;
+            right:10rem/@rem;
+          }
+      }
+      .class-navs-small{
+        width:600px;
+        li{
+          float:left;
+          margin:0 5rem/@rem;
+          a{
+            height:40rem/@rem;
+            line-height:40rem/@rem;
+            display: block;
+            border-bottom:2px solid transparent;
+          }
+          a.current{
+            color:#F4483E;
+            border-bottom:2px solid #F4483E;
+          }
+        }
       }
     }
-    .class-navs-small{
-      width:600px;
-      li{
-        float:left;
-        margin:0 5rem/@rem;
-        a{
-          height:40rem/@rem;
-          line-height:40rem/@rem;
-          display: block;
-          border-bottom:2px solid transparent;
-        }
-        a.current{
-          color:#F4483E;
-          border-bottom:2px solid #F4483E;
-        }
-      }
-    }
-  }
+//页面滚动需要的条件;
+.class-navs.onover{
+  overflow: hidden;
+}
 //白菜价-产品详情公用样式
   li.baicai-items{
       position: relative;
@@ -455,7 +459,7 @@ img{
 }
 //凑单品页面导航条样式
 .gsproduct-navs{
-  widows: 100%;
+  width: 100%;
   position: relative;
   .big-navs{
     width:33.3%;
@@ -474,32 +478,33 @@ img{
         background-size:16rem/@rem 10rem/@rem;
       }
     }
-  }
-  .small-navs{
-    background-color: #fff;
-    position: absolute;
-    top:40rem/@rem;
-    left:0;
-    width: 105%;
-    display: none;
-    z-index:99;
-    li{
-      width:100%;
-      a{
-        text-align: left;
-        text-indent: 1em;
-        border-top:@border;
+    .small-navs{
+      background-color: #fff;
+      position: absolute;
+      top:40rem/@rem;
+      left:0;
+      width: 105%;
+      display: none;
+      z-index:1;
+      li{
+        width:100%;
+        a{
+          text-align: left;
+          text-indent: 1em;
+          border-top:@border;
+        }
+        a.current{
+          background: url(../images/onright.png) no-repeat 580rem/@rem 10rem/@rem;
+        }
       }
-      a.current{
-        background: url(../images/onright.png) no-repeat 580rem/@rem 10rem/@rem;
+      li:last-child a{
+        border-bottom:@border;
       }
     }
-    li:last-child a{
-      border-bottom:@border;
+    .small-navs.current{
+      display: block;
     }
-  }
-  .small-navs.current{
-    display: block;
+  
   }
 }
 //凑单页产品列表样式

@@ -269,7 +269,6 @@ img {
   position: relative;
   padding-right: 0.3rem;
   background-color: #fff;
-  overflow: hidden;
 }
 .class-navs .baicai-bg-img {
   width: 0.4rem;
@@ -304,6 +303,9 @@ img {
 .class-navs .class-navs-small li a.current {
   color: #F4483E;
   border-bottom: 2px solid #F4483E;
+}
+.class-navs.onover {
+  overflow: hidden;
 }
 li.baicai-items {
   position: relative;
@@ -424,7 +426,7 @@ li.baicai-items a .img img {
   right: 0.2rem;
 }
 .gsproduct-navs {
-  widows: 100%;
+  width: 100%;
   position: relative;
 }
 .gsproduct-navs .big-navs {
@@ -445,30 +447,30 @@ li.baicai-items a .img img {
   background-repeat: no-repeat;
   background-size: 0.16rem 0.1rem;
 }
-.gsproduct-navs .small-navs {
+.gsproduct-navs .big-navs .small-navs {
   background-color: #fff;
   position: absolute;
   top: 0.4rem;
   left: 0;
   width: 105%;
   display: none;
-  z-index: 99;
+  z-index: 1;
 }
-.gsproduct-navs .small-navs li {
+.gsproduct-navs .big-navs .small-navs li {
   width: 100%;
 }
-.gsproduct-navs .small-navs li a {
+.gsproduct-navs .big-navs .small-navs li a {
   text-align: left;
   text-indent: 1em;
   border-top: 1px solid #ccc;
 }
-.gsproduct-navs .small-navs li a.current {
+.gsproduct-navs .big-navs .small-navs li a.current {
   background: url(../images/onright.png) no-repeat 5.8rem 0.1rem;
 }
-.gsproduct-navs .small-navs li:last-child a {
+.gsproduct-navs .big-navs .small-navs li:last-child a {
   border-bottom: 1px solid #ccc;
 }
-.gsproduct-navs .small-navs.current {
+.gsproduct-navs .big-navs .small-navs.current {
   display: block;
 }
 .gsproduct-items {
