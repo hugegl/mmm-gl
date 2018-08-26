@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+  <title>慢慢买-gl</title>
+</head>
+<body>
+  <div class="mmm-warpper">
+      <!-- 公共头部 -->
+      <div class="mmm-tittle clearfix">
+          <a href="index.html" class="logo fl"><img src="./images/header_logo.png" alt=""></a>
+          <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
+          <p class="text"></p>
+      </div>
+      <!-- 搜索框 -->
+      <div class="mmm-search">
+        <input type="search" placeholder="请输入你想比价的商品名称">
+        <button >搜索</button>
+      </div>
+      <!-- 面包屑导航 -->
+      <div class="bread-navs">
+          <!-- 面包屑导航动态渲染 -->
+      </div>
+      <!-- 商品详情 -->
+      <div class="product">
+
+      </div>
+      <!-- 底部 -上面-->
+      <div class="footer-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;" class="toUp"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <!-- 底部-下面 -->
+      <div class="footer-bottom">
+          <p><span class="red">手机app下载</span><span class="black">买手机版</span>--掌上比价平台慢慢</p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/bijia.js"></script>
+<!-- 面包屑导航动态渲染 -->
+<script type="text/html" id="bread-navs">
+  <a href="index.html">首页</a>>
+  <a href="productlist.html?categoryid={{categoryid}}">{{oldHtml}}</a>>
+  <a href="#"><%=result[0].productName.slice(0,10)%></a>
+  <button class="btn">筛选</button>
+</script>
+<script type="text/html" id="product">
+  <div class="product-tittle">
+    <p>{{result[0].productName}}</p>
+    {{@result[0].productImg}}
+    <img src="images/sc.jpg" alt="" class="sc">
+  </div>
+  <div class="clearfix thans">
+    <a href="javascript:;" class="fl than-one">比价购买</a>
+    <a href="javascript:;" class="fl than-two">产品参数</a>
+    <a href="javascript:;" class="fl than-three">评价(6868)</a>
+  </div>
+  <!-- 比价信息 -->
+  <div class="bijia-information"> 
+    {{@result[0].bjShop}}
+  </div>
+  <!-- 提示信息 -->
+  <div class="tips p10">
+    <p class="small">*实际价格....</p>
+  </div>
+  <!-- 网友评价 -->
+  <div class="evaluates p10">
+    <p class="test-center">网友评价</p>
+  </div>
+  <!-- 评价详情 -->
+  <div class="evaluates-items">
+    <ul>     
+    </ul>
+  </div>
+</script>
+<script type="text/html" id="evaluates-items"> 
+  {{each result v i}} 
+  <li class="p10">
+    <p class="clearfix">
+      <span class="small fl">{{v.comName}}</span>
+      <span class="small fr">{{v.comTime}}</span>
+    </p>
+    <p class="clearfix p10">
+      <span class="small fr">{{v.comFrom}}</span>
+    </p>
+    <p>{{v.comContent}}</p>
+  </li>
+  {{/each}}
+</script>
+</html>

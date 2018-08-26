@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <title>慢慢买-gl</title>
+</head>
+<body>
+  <div class="mmm-warpper">
+      <!-- 公共头部 -->
+      <div class="mmm-tittle clearfix baicai-bgc">
+          <a href="javascript:history.back();" class="logo fl"><img src="./images/baicai-arrow-left.png" alt=""></a>
+          <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
+          <p class="text font-fff test-center p10">
+              <!-- 动态渲染页头 -->
+          </p>
+      </div>
+      <div class="baicaijia-items p10">
+          <!-- 产品动态渲染 -->
+            <ul class="items">
+                <!-- 动态渲染商品详情 -->
+            </ul>
+      </div>
+      <!-- 底部 -上面-->
+      <div class="footer-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;" class="toUp"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <!-- 底部-下面 -->
+      <div class="footer-bottom">
+          <p><span class="red">手机app下载</span><span class="black">买手机版</span>--掌上比价平台慢慢</p>
+          <p>m.manmanbuy.com</p>
+      </div>
+      <!-- 模态框 -->
+      <div class="model">
+          <div class="banner">
+              <img src="./images/arrows/arrow-left.png" alt=""class="al">
+              <div class="banner-img">
+                <ul class="md clearfix">
+                    <!-- 模态框内轮播图 -->
+                </ul>
+              </div>
+              <img src="./images/arrows/arrow-right_03.png" alt=""class="ar">
+          </div>
+      </div>
+  </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>
+<!-- 动态渲染页头 -->
+<script type="text/html" id="font-fff">
+    {{result[id].couponTitle}}优惠券
+</script>
+<!-- 动态渲染商品详情 -->
+<script type="text/html" id="items">
+{{each result v i}}  
+    <li data-img="{{v.couponProductImg}}">
+        <a href="javascript:;" class="clearfix">
+            <div class="fl img">
+                {{@v.couponProductImg}}
+            </div>
+            <div class="text"> 
+                <p>{{v.couponProductName}}</p>
+                <p>{{v.couponProductPrice}}</p>
+                <p class="small"><span class="red">{{v.couponProductTime}}</span><img class="fr couponproduct-arrow-bg" src="./images/arrow-right.svg"></p>
+            </div>
+        </a>
+    </li>
+{{/each}}
+</script>
+<!-- 模态框内轮播图 -->
+<script type="text/html" id="md">
+    {{each result v i}}  
+        <li class="fl">
+        {{@v.couponProductImg}}
+        </li>
+    {{/each}}
+    </script>
+</html>

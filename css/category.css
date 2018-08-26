@@ -1,0 +1,39 @@
+.category-title .titles {
+  border: 1px solid #ccc;
+  border-radius: 0.05rem;
+}
+.category-title .titles .titles-big {
+  height: 0.55rem;
+  line-height: 0.55rem;
+  display: block;
+  text-indent: 1em;
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+  background-image: url(../images/arrow-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 95% 0.2rem;
+  background-size: 0.2rem 0.15rem;
+}
+.category-title .titles li:last-child .titles-big {
+  border-bottom: none;
+}
+.category-title .titles li ul {
+  display: none;
+}
+.category-title .titles li ul.current {
+  display: block;
+}
+.category-title .small-border {
+  width: 100%;
+}
+.category-title .small-border li {
+  width: 33.3%;
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.category-title .small-border li a {
+  width: 100%;
+  display: block;
+}

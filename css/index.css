@@ -1,0 +1,44 @@
+.navs {
+  width: 100%;
+}
+.navs ul {
+  width: 100%;
+}
+.navs ul li {
+  width: 25%;
+  margin: 0.05rem auto;
+  display: block;
+}
+.navs ul p {
+  text-align: center;
+}
+.navs ul img {
+  margin: 0.05rem auto;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.navs ul li.current {
+  display: none;
+}
+.more {
+  padding: 0.1rem;
+  background-image: linear-gradient(to bottom, #ffaf47, #FF841D);
+  color: #fff;
+}
+.more img {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.more-jump {
+  padding: 0.1rem;
+  width: 100%;
+}
+.more-jump a {
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.1rem;
+  text-align: center;
+}

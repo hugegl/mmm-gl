@@ -1,0 +1,24 @@
+.items {
+  width: 100%;
+}
+.items li {
+  float: left;
+  width: 50%;
+  height: 2.55rem;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+.items li img {
+  margin: 0 auto;
+}
+.items li p {
+  margin: 0.05rem 0;
+}
+.items li h4 {
+  margin: 0.05rem 0;
+  height: 0.5rem;
+}
+.items li.current {
+  display: none;
+}

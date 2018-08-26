@@ -1,0 +1,61 @@
+@color-zt:#FF841D;
+@rem:100px;
+@border:1px solid #ccc;
+.product{
+  background-color: #fff;
+  .product-tittle{
+    position: relative;
+    p{
+      margin:10rem/@rem;
+      text-align: center;
+    }
+    img{
+      margin:0 auto;
+    }
+    .sc{
+      width: 40rem/@rem;
+      height: 40rem/@rem;
+      position: absolute;
+      bottom:10rem/@rem;
+      right: 20rem/@rem;
+    }
+  }
+  .thans{
+    border-top: 1px solid #c14d00;
+    border-bottom: 1px solid #c14d00;
+    a{
+      display: block;
+      line-height: 35rem/@rem;
+      height:35rem/@rem;
+      width:33.3%;
+      text-align: center;
+      border-right:1px solid #c14d00;
+      color:#fff;
+    }
+    .than-one{
+      background-image: linear-gradient(to right, #ff9000,#ffa632);
+    }
+    .than-two{
+      background-image: linear-gradient(to right, #ffbb00,#ffd050);
+    }
+    .than-three{
+      background-image: linear-gradient(to right,#ffbb00, #ffd050);
+      border-right:none;
+    }
+  }
+  .bijia-information{
+    border-bottom:@border;
+    img{
+      margin:10rem/@rem 0 0 10rem/@rem;
+    }
+  }
+  .evaluates{
+    border-top:3px solid #666;
+    background-color: #ccc;
+  }
+  .evaluates-items{
+    li{
+      border-bottom:@border;
+    }
+  }
+}

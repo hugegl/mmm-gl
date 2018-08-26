@@ -1,0 +1,44 @@
+@color-zt:#FF841D;
+@rem:100px;
+@border:1px solid #ccc;
+.category-title{
+  .titles{
+    border:@border;
+    border-radius:5rem/@rem;
+    .titles-big{
+      height: 55rem/@rem;
+      line-height: 55rem/@rem;
+      display: block;
+      text-indent:1em; 
+      border-bottom:@border;
+      font-weight: 700;
+      background-image: url(../images/arrow-bottom.png);
+      background-repeat: no-repeat;
+      background-position:  95% 20rem/@rem;
+      background-size:20rem/@rem 15rem/@rem ;
+    }
+    li:last-child .titles-big{
+      border-bottom:none;
+    }
+    li ul{
+      display: none;
+    }
+    li ul.current{
+      display: block;
+    }
+  }
+  .small-border{
+    width:100%;
+    li{
+      width:33.3%;
+      float: left;
+      border-right:@border;
+      border-bottom:@border;
+      text-align: center;
+      a{
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

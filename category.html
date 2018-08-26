@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/category.css">
+  <title>慢慢买-gl</title>
+</head>
+<body>
+  <div class="mmm-warpper">
+      <!-- 公共头部 -->
+      <div class="mmm-tittle clearfix">
+          <a href="index.html" class="logo fl"><img src="./images/header_logo.png" alt=""></a>
+          <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
+          <p class="text"></p>
+      </div>
+      <!-- 搜索框 -->
+      <div class="mmm-search">
+        <input type="search" placeholder="请输入你想比价的商品名称">
+        <button >搜索</button>
+      </div>
+      <div class="category-title">
+        <ul class="titles">
+          <!-- 动态渲染坑-标题 -->
+
+        </ul>
+      </div>
+    
+   
+      <!-- 底部 -上面-->
+      <div class="footer-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;" class="toUp"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <!-- 底部-下面 -->
+      <div class="footer-bottom">
+          <p><span class="red">手机app下载</span><span class="black">买手机版</span>--掌上比价平台慢慢</p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/category.js"></script>
+<!-- 大标题动态模板 -->
+<script type="text/html" id="titles">
+{{each result v i}}
+<li>
+  <a href="javascript:;" data-id="{{v.titleId}}" class="titles-big">{{v.title}}</a>
+  <ul class="titles-small-{{v.titleId}} clearfix small-border">
+    <!-- 动态渲染-小内容 -->
+  </ul>
+</li>
+{{/each}}
+</script>
+<!-- 小标题动态渲染模板 -->
+<script  type="text/html" id="titles-small"> 
+  {{each result v i }} 
+  <li><a href="productlist.html?categoryid={{v.categoryId}}">{{v.category}}</a></li>
+  {{/each}}
+</script>
+</html>

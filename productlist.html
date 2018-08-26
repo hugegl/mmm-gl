@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/productlist.css">
+  <title>慢慢买-gl</title>
+</head>
+<body>
+  <div class="mmm-warpper">
+      <!-- 公共头部 -->
+      <div class="mmm-tittle clearfix">
+          <a href="index.html" class="logo fl"><img src="./images/header_logo.png" alt=""></a>
+          <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
+          <p class="text"></p>
+      </div>
+      <!-- 搜索框 -->
+      <div class="mmm-search">
+        <input type="search" placeholder="请输入你想比价的商品名称">
+        <button >搜索</button>
+      </div>
+      <!-- 面包屑导航 -->
+      <div class="bread-navs">
+          <!-- 面包屑导航动态渲染 -->
+      </div>
+      <div class="productlist-items">
+        <ul class="items">
+            <!-- 产品动态渲染 -->
+        </ul>
+      </div>
+        <!-- 分页按钮部分 -->
+        <div class="pages">
+          <button class="btn pages-prev">上一页</button>
+          <select name="pages" value="3" class="pages-text">
+              <!-- 动态渲染options -->
+
+          </select>
+          <button class="btn pages-next">下一页</button>
+        </div>
+      <!-- 底部 -上面-->
+      <div class="footer-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;" class="toUp"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <!-- 底部-下面 -->
+      <div class="footer-bottom">
+          <p><span class="red">手机app下载</span><span class="black">买手机版</span>--掌上比价平台慢慢</p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productlist.js"></script>
+<!-- 面包屑导航动态渲染 -->
+<script type="text/html" id="bread-navs">
+  <a href="index.html">首页</a>>
+  <a href="category.html">全部分类</a>>
+  {{each result v i}}
+  <a href="#">{{v.category}}</a>
+  {{/each}}
+  <button class="btn">筛选</button>
+</script>
+<!-- 产品动态渲染 -->
+<script type="text/html" id="items">
+  {{each result v i}}  
+  <li >
+    <a href="bijia.html?productid={{v.productId}}&categoryid={{categoryid}}" class="clearfix">
+      <div class="fl img">
+        {{@v.productImg}}
+      </div>
+      <div class="text"> 
+        <p>{{v.productName}}<span class="red">{{v.productPrice}}</span></p>
+        <p class="small"><span>{{v.productQuote}}</span>　　<span>{{v.productCom}}</span></p>
+      </div>
+    </a>
+  </li>
+{{/each}}
+</script>
+<!-- 三个按钮动态渲染 -->
+<script type="text/html" id="options">
+  <%   for (var i = 1 ; i<=all ; i++) {%>
+  <option value="{{i}}">{{i}}/{{all}}</option>
+  <% }%>
+</script>
+</html>

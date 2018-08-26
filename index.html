@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>慢慢买-gl</title>
+</head>
+<body>
+  <div class="mmm-warpper">
+      <!-- 公共头部 -->
+      <div class="mmm-tittle clearfix">
+          <a href="index.html" class="logo fl"><img src="./images/header_logo.png" alt=""></a>
+          <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
+          <p class="text"></p>
+      </div>
+      <!-- 搜索框 -->
+      <div class="mmm-search">
+        <input type="search" placeholder="请输入你想比价的商品名称">
+        <button >搜索</button>
+      </div>
+    <!-- 导航栏 -->
+      <div class="navs"> 
+        <ul class="clearfix">
+            <!-- 动态渲染navs坑 -->
+            <!-- <li><a href=""><img src="" alt=""><p></p></a></li> -->
+          </ul>
+      </div>
+      <div class="more clearfix">
+          <span class="fl">超值折扣推荐</span>
+          <a href="javascript:;" class="fr"><img src="./images/more.png" alt=""></img></a>
+      </div>
+      <!-- 超值推荐下面的商品 -->
+      <div class="more-items">
+          <ul class="items">
+            <!-- 动态渲染 -->
+            <!-- <li>
+              <a href="">
+                <img src="" alt="">
+              </a>
+            </li> -->
+          </ul>
+      </div>
+      <!-- 更多优惠跳转页面 -->
+      <div class="more-jump">
+          <a href="sqkong.html">更多优惠信息>></a>
+      </div>
+      <!-- 品牌排行 -->
+      <div class="more clearfix">
+          <span class="fl">品牌排行</span>
+          <a href="javascript:;" class="fr"><img src="./images/more.png" alt=""></img></a>
+      </div>
+      <!-- 底部 -上面-->
+      <div class="footer-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;" class="toUp"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <!-- 底部-下面 -->
+      <div class="footer-bottom">
+          <p><span class="red">手机app下载</span><span class="black">买手机版</span>--掌上比价平台慢慢</p>
+          <p>m.manmanbuy.com</p>
+      </div>
+  </div>
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/html" id="navs">
+  {{each result v i }}
+  <li class="fl {{i>=8?'current':''}}"><a href="{{v.titlehref}}">
+    {{@v.img}}
+    <p>{{v.name}}</p></a></li>
+  {{/each}}
+</script>
+<script type="text/html" id="items">
+  {{each result v i}}  
+    <li>
+      <a href="" data-id="{{v.productId}}" class="clearfix">
+        <div class="fl img">
+          {{@v.productImgSm}}
+        </div>
+        <div class="text"> 
+          <p>{{v.productName}}<span class="red">{{v.productPinkage}}</span></p>
+          <p class="small"><span>{{v.productFrom}} | {{v.productTime}}</span><span class="fr"><img src="./images/image.png">{{v.productComCount.replace('有','').replace('人评论','')}}</span></p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+</html>

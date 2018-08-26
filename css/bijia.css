@@ -1,0 +1,56 @@
+.product {
+  background-color: #fff;
+}
+.product .product-tittle {
+  position: relative;
+}
+.product .product-tittle p {
+  margin: 0.1rem;
+  text-align: center;
+}
+.product .product-tittle img {
+  margin: 0 auto;
+}
+.product .product-tittle .sc {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0.2rem;
+}
+.product .thans {
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+.product .thans a {
+  display: block;
+  line-height: 0.35rem;
+  height: 0.35rem;
+  width: 33.3%;
+  text-align: center;
+  border-right: 1px solid #c14d00;
+  color: #fff;
+}
+.product .thans .than-one {
+  background-image: linear-gradient(to right, #ff9000, #ffa632);
+}
+.product .thans .than-two {
+  background-image: linear-gradient(to right, #ffbb00, #ffd050);
+}
+.product .thans .than-three {
+  background-image: linear-gradient(to right, #ffbb00, #ffd050);
+  border-right: none;
+}
+.product .bijia-information {
+  border-bottom: 1px solid #ccc;
+}
+.product .bijia-information img {
+  margin: 0.1rem 0 0 0.1rem;
+}
+.product .evaluates {
+  border-top: 3px solid #666;
+  background-color: #ccc;
+}
+.product .evaluates-items li {
+  border-bottom: 1px solid #ccc;
+}
