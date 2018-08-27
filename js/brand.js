@@ -1,6 +1,13 @@
 $(function(){
   var brandtitleid = getUrl('brandtitleid');
   var oldid = getUrl('oldid');
+  //从别的页面跳过来会出错,所以增加判断
+  if(brandtitleid==3){
+    brandtitleid = 0;
+  }
+  if(oldid ==3){
+    oldid=0;
+  }
   var productid;
   //获取当前访问的页面是哪一个,动态生成名字;
   $.ajax({
@@ -37,7 +44,7 @@ $(function(){
       success:function(e){
         var str = template('sales-volume',e);
         $('.sales-volume').html(str);
-        productid = e.result[0].productId;
+        var productid = e.result[0].productId;
         var productImg = e.result[0].productImg;
         var productName = e.result[0].productName;
         getcomment(productImg,productName);
@@ -57,7 +64,6 @@ $(function(){
         e.productName = productName;
         var str = template('comment',e);
         $('.comment').html(str);
-        console.log(e);
       }
     })
   }

@@ -17,10 +17,10 @@
           <a href="javascript:;" class="download fr"><img src="./images/header_app.png" alt=""></a>
           <p class="text font-fff test-center p10">商场导航</p>
       </div>
-          <!-- 商品列详情 -->
+          <!-- 商场列详情 -->
         <div class="p10 sitenav-items-parent">
             <div class="items clearfix sitenav-items">
-                <!-- 动态渲染商品列表 -->
+                <!-- 动态渲染商场列表 -->
             </div>
         </div>
       <!-- 底部 -上面-->
@@ -40,10 +40,10 @@
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sitenav.js"></script>
-<!-- 动态渲染商品列表 -->
+<!-- 动态渲染商场列表 -->
 <script type="text/html" id="items">
     {{each result v i}}  
-    <a href="{{v.navHref}}" class="clearfix p10">
+    <a href="{{v.navHref}}" class="clearfix p10" target="_blank">
         <img class="fl" src="{{v.navImg}}" alt="">
         <span class="text"> 
         {{v.navTitle}}

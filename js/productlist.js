@@ -40,7 +40,6 @@ $(function(){
         //动态将页面总数计算后添加进去
         var optionsStr =  template('options',e);
         $('.pages-text').html(optionsStr);
-        console.log(e);
   });
   //上一页
   $('.pages').on('click','.pages-prev',function(){

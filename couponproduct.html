@@ -19,6 +19,10 @@
               <!-- 动态渲染页头 -->
           </p>
       </div>
+      <!-- 温馨提示 -->
+      <div class="p10">
+        <p class="small test-center">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    </div>
       <div class="baicaijia-items p10">
           <!-- 产品动态渲染 -->
             <ul class="items">
@@ -41,11 +45,12 @@
           <div class="banner">
               <img src="./images/arrows/arrow-left.png" alt=""class="al">
               <div class="banner-img">
-                <ul class="md clearfix">
-                    <!-- 模态框内轮播图 加油-->
+                <ul class="md">
+                    <!-- 模态框内轮播图-->
                 </ul>
               </div>
               <img src="./images/arrows/arrow-right_03.png" alt=""class="ar">
+              <span class="off"></span>
           </div>
       </div>
   </div>
@@ -62,7 +67,7 @@
 <script type="text/html" id="items">
 {{each result v i}}  
     <li data-img="{{v.couponProductImg}}">
-        <a href="javascript:;" class="clearfix">
+        <a href="javascript:;" class="clearfix" data-index="{{i}}">
             <div class="fl img">
                 {{@v.couponProductImg}}
             </div>
@@ -78,7 +83,7 @@
 <!-- 模态框内轮播图 -->
 <script type="text/html" id="md">
     {{each result v i}}  
-        <li class="fl">
+        <li>
         {{@v.couponProductImg}}
         </li>
     {{/each}}

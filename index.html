@@ -47,7 +47,7 @@
       </div>
       <!-- 更多优惠跳转页面 -->
       <div class="more-jump">
-          <a href="sqkong.html">更多优惠信息>></a>
+          <a href="javascript:;" class="toUp">更多优惠信息>></a>
       </div>
       <!-- 品牌排行 -->
       <div class="more clearfix">
@@ -81,7 +81,7 @@
 <script type="text/html" id="items">
   {{each result v i}}  
     <li>
-      <a href="" data-id="{{v.productId}}" class="clearfix">
+      <a href="moneyproduct.html?productid={{v.productId}}" class="clearfix">
         <div class="fl img">
           {{@v.productImgSm}}
         </div>

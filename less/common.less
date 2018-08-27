@@ -193,7 +193,7 @@ img{
     }
   }
   [class*='pages-']{
-      margin:10rem/@rem  60rem/@rem;
+      margin:10rem/@rem  5%;
     }
  }
  //公用的评论页-html返回的;
@@ -315,11 +315,12 @@ img{
           }
       }
       .class-navs-small{
-        width:600px;
+        width:200px;//先给一个最大的;后期动态设置动态设置
+        height:40rem/@rem;
         li{
           float:left;
-          margin:0 5rem/@rem;
           a{
+            margin:0 5rem/@rem;
             height:40rem/@rem;
             line-height:40rem/@rem;
             display: block;
@@ -665,12 +666,16 @@ img{
     top:20%;
     left:50%;
     transform: translate(-50%);
-    .al,.ar{
+    .al,.ar,.off{
+      display: block;
       width: 30rem/@rem;
       height: 50rem/@rem;
       position: absolute;
       top:50%;
       transform: translateY(-50%);
+    }
+    .al.current,.ar.current{
+      display: none;
     }
     .al{
       left:-50rem/@rem;
@@ -678,14 +683,36 @@ img{
     .ar{
       right:-50rem/@rem;
     }
+    .off{
+      width: 0.28rem;
+      height: 0.28rem;
+      border-radius:15rem/@rem;
+      top: -10rem/@rem;
+      transform: translateY(0);
+      right: -10rem/@rem;
+      background-image: url(../images/icon_bar.png);
+      background-repeat: no-repeat;
+      background-position: -362rem/@rem  -33rem/@rem;
+      background-size: 440rem/@rem 264rem/@rem;
+    }
     .banner-img{
       width: 200rem/@rem;
       height: 160rem/@rem;
       overflow: hidden;
       .md{
-        img{
-          width: 200rem/@rem;
-          height: 160rem/@rem;
+        position: relative;
+        li{
+          position: absolute;
+          top:0;
+          left:0;
+          display: none;
+          img{
+            width: 200rem/@rem;
+            height: 160rem/@rem;
+          }
+        }
+        li.current{
+          display: block;
         }
       }
   
